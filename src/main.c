@@ -1,15 +1,12 @@
-#define BUSH_DEBUG
-
-#include "inc\io.h"
-#include "inc\utils.h"
 #include "inc\bush.h"
 
 int main(void) {
-	char *s;
-
-	if (analyse(s = readin()))
+	readin();
+	if (analyse())
 		return -1;
-	bush(s);
+	if (hay())
+		return -1;
+	bind();
 	return 0;
 }
 
