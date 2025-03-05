@@ -21,6 +21,9 @@ inline void b_swap32(void *a, void *b) {
 }
 
 inline char b_gettp(char c) {
-	return (c == '+' || c == '*') ? 0 : 1;
+	switch (c) {
+		case '+': case '*': return 0;
+		case '-': case '/': return 1;
+	}
 }
 

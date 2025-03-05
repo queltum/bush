@@ -10,6 +10,10 @@ typedef enum {
 	TP_ROOT
 } tp_t;
 
+typedef struct {
+	u8_t id:7, tp:1;
+} opd_t;
+
 /* branch:
 	id  -- 	an operator id;
 	lvl -- 	an operator level (how many parenthesis it is in);
@@ -22,9 +26,8 @@ typedef enum {
 	'*' or '/', else - '+' or '-'; 
 */
 typedef struct {
-	u8_t id:7, l_id:7, r_id:7,
-		 tp:1, l_tp:1, r_tp:1,
-		 xf:1, ef:1, rnk:1, lvl:5;
+	u16_t id:7, tp:1, rf:1, ef:1, rnk:1, lvl:5;
+	opd_t l, r;
 } branch_t;
 
 #endif

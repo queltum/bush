@@ -3,8 +3,8 @@ bush is a lightweight syntax calculator;
 Here is the stages of handling any maths expressions:
 	readin  -- reads an expression from stdout and records it in the buffer;
 	analyse -- used to check an expression for syntax errors. The next functions don't do that;
-	hay		-- the bush "tokeniser". You get it if check the source code;
-	bind	-- the bush "parser". It binds branches and operands to each other;
+	hay	    -- the bush "tokeniser". You get it if check the source code;
+	bind    -- the bush "parser". It binds branches and operands to each other;
 
 	It does not have any evaluators yet.
 

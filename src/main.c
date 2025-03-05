@@ -7,6 +7,8 @@ int main(void) {
 	if (hay())
 		return -1;
 	bind();
+	printf("%llf\n", evaluate());
+	dump();
 	return 0;
 }
 
