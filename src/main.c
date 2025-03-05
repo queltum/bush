@@ -8,7 +8,6 @@ int main(void) {
 		return -1;
 	bind();
 	printf("%llf\n", evaluate());
-	dump();
 	return 0;
 }
 
